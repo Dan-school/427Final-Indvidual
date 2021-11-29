@@ -66,3 +66,4 @@ F1: 0.973
 All three of the pipelines created worked exceptionally well. The lowest accuracy was the quickest performing, it was originally 93.4% but by using ngrams I was able to increase accuracy by 2.2% getting 95.7% accuracy with similar precision. The most accurate was the SVM prediction pipeline coming in at 97.8% accurate. Over all the results confirm that the goal set has been reached.
 
 ### Discussion
+If I were to continue this project, I would give Word2vec a go. I didn’t get to it for this project because of other class projects and the amount of time it would take to run those. The BoW seemed accurate enough to be passable though, with the lowest accuracy 95.7%. I would also be interested in trying to categorize new unseen articles that weren’t in the test data and see how the prediction models work on them.

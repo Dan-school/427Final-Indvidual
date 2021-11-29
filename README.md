@@ -12,10 +12,10 @@ The problem faced is the problem that we all face, catorgorizing biomedical rese
 - matplotlib
 
 ### The dataset
-The dataset will come from pubmed, and as per the instructions, pull all the documents that were published after 2010 that have one of the four classifications as above. Thank fully I heard about BioPython so all of the articles were pulled using that and then storing them in an xml file for storage and later use.
+The dataset will come from pubmed, and as per the instructions, pull all the documents that were published after 2010 that have one of the four classifications list above. Thank fully I heard about BioPython so all of the articles were pulled using that making it much simpler, and then storing them in an xml file for later use.
 
 ### Method
-So like said in the dataset portion, biopython was used to collect articles. After the data was collected though, I used my normalize method from homework 2 to normalize the articles. It takes the the string, tokenizes it removing punctuation, then removes stop words, lower cases the words, port stems, then lemmatizes the words, finally returning a string or normailzed words. After the dataset was split into a training set of 80/20 which seemed to work very well for 3 pipelines.
+So like said in the dataset portion, biopython was used to collect articles. After the data was collected though, I used my normalize method from homework 2 to normalize the articles. It takes the string, tokenizes it removing punctuation, then removes stop words, lower cases the words, port stems, then lemmatizes the words, finally returning a normailzed string. After the dataset was split into a training set of 80/20 which seemed to work very well for 3 pipelines.
 
 ### Validation and results
 #### Naive Bayes
@@ -63,3 +63,6 @@ Recall: 0.973
 F1: 0.973
 ```
 ### Conclusion
+All three of the pipelines created worked exceptionally well. The lowest accuracy was the quickest performing, it was originally 93.4% but by using ngrams I was able to increase accuracy by 2.2% getting 95.7% accuracy with similar precision. The most accurate was the SVM prediction pipeline coming in at 97.8% accurate. Over all the results confirm that the goal set has been reached.
+
+### Discussion

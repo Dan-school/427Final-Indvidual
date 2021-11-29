@@ -33,3 +33,33 @@ Precision: 0.957
 Recall: 0.957
 F1: 0.957
 ```
+#### SVM
+```
+pipe = Pipeline([
+    ('vect', TfidfVectorizer(max_df=0.9,ngram_range=(1,2))),
+    ('svm', SGDClassifier(loss='hinge', penalty='l1', alpha=1e-5, max_iter=100, random_state=42)),
+])
+```
+![plot](/confusion_matrix_SVM.png)
+```
+Accuracy: 0.978147
+Precision: 0.978
+Recall: 0.978
+F1: 0.978
+```
+#### Logistic Regression
+```
+pipe = Pipeline([   #Pipeline for logistic regression
+    ('vect', TfidfVectorizer(max_df=0.8)),
+    ('clf', LogisticRegression(penalty='l2', C=3, random_state=42,
+                                 max_iter=1000)),
+])
+```
+![plot](/confusion_matrix_LR.png)
+```
+Accuracy: 0.973208
+Precision: 0.973
+Recall: 0.973
+F1: 0.973
+```
+### Conclusion

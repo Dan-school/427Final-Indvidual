@@ -18,7 +18,7 @@ The dataset will come from pubmed, and as per the instructions, pull all the doc
 So like said in the dataset portion, biopython was used to collect articles. After the data was collected though, I used my normalize method from homework 2 to normalize the articles. It takes the the string, tokenizes it removing punctuation, then removes stop words, lower cases the words, port stems, then lemmatizes the words, finally returning a string or normailzed words. After the dataset was split into a training set of 80/20 which seemed to work very well for 3 pipelines.
 
 ### Validation and results
-#### The first pipeline Naive Bayes
+#### Naive Bayes
 ```
 pipe  = Pipeline([
     ('vect', CountVectorizer(ngram_range=(1,2))),
@@ -26,6 +26,7 @@ pipe  = Pipeline([
     ('clf', MultinomialNB( alpha=0.1, fit_prior=True, class_prior=None)),
 ])
 ```
+PICTURE HERE
 ```
 Accuracy: 0.957491
 Precision: 0.957

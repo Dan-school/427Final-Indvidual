@@ -19,8 +19,10 @@ So like said in the dataset portion, biopython was used to collect articles. Aft
 
 ### Validation and results
 #### The first pipeline Naive Bayes
-```pipe  = Pipeline([
+```
+pipe  = Pipeline([
     ('vect', CountVectorizer(ngram_range=(1,2))),
     ('tfidf', TfidfTransformer( use_idf=True)),
     ('clf', MultinomialNB( alpha=0.1, fit_prior=True, class_prior=None)),
-])```
+])
+```

@@ -26,3 +26,9 @@ pipe  = Pipeline([
     ('clf', MultinomialNB( alpha=0.1, fit_prior=True, class_prior=None)),
 ])
 ```
+```
+Accuracy: 0.957491
+Precision: 0.957
+Recall: 0.957
+F1: 0.957
+```

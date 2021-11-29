@@ -26,7 +26,7 @@ pipe  = Pipeline([
     ('clf', MultinomialNB( alpha=0.1, fit_prior=True, class_prior=None)),
 ])
 ```
-![plot](confusion_matric_Bayes.png)
+![plot](/confusion_matrix_Bayes.png)
 ```
 Accuracy: 0.957491
 Precision: 0.957

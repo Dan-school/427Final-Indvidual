@@ -15,8 +15,7 @@ The problem faced is the problem that we all face, categorizing biomedical resea
 The dataset will come from pubmed, and as per the instructions, pull all the documents that were published after 2010 that have one of the four classifications list above. Thank fully I heard about BioPython so all of the articles were pulled using that making it much simpler, and then storing them in an xml file for later use.
 
 ### Method
-So like said in the dataset portion, biopython was used to collect articles. After the data was collected though, I used my normalize method from homework 2 to normalize the articles. It takes the string, tokenizes it removing punctuation, then removes stop words, lower cases the words, port stems, then lemmatizes the words, finally returning a normailzed string. After the dataset was split into a training set of 80/20 which seemed to work very well for 3 pipelines.
-
+So like said in the dataset portion, biopython was used to collect articles. After the data was collected though, I used my normalize method from homework 2 to normalize the articles. It takes the string, tokenizes it removing punctuation, then removes stop words, lower cases the words, port stems, then lemmatizes the words, finally returning a normailzed string. After the dataset was split into a training set of 80/20.
 ### Validation and results
 #### Naive Bayes
 ```

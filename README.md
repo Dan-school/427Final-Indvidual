@@ -36,7 +36,7 @@ F1: 0.957
 ```
 pipe = Pipeline([
     ('vect', TfidfVectorizer(max_df=0.9,ngram_range=(1,2))),
-    ('svm', SGDClassifier(loss='hinge', penalty='l1', alpha=1e-5, max_iter=100, random_state=42)),
+    ('clf', SGDClassifier(loss='hinge', penalty='l1', alpha=1e-5, max_iter=100, random_state=42)),
 ])
 ```
 ![plot](/confusion_matrix_SVM.png)

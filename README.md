@@ -31,6 +31,16 @@ Accuracy: 0.957491
 Precision: 0.957
 Recall: 0.957
 F1: 0.957
+                               precision    recall  f1-score   support
+
+    acute rheumatic arthritis       0.95      0.96      0.95      1617
+                disease, lyme       0.95      0.92      0.93      1550
+abnormalities, cardiovascular       0.98      0.96      0.97      1644
+          knee osteoarthritis       0.95      0.99      0.97      1870
+
+                     accuracy                           0.96      6681
+                    macro avg       0.96      0.96      0.96      6681
+                 weighted avg       0.96      0.96      0.96      6681
 ```
 #### SVM
 ```
@@ -45,6 +55,16 @@ Accuracy: 0.978147
 Precision: 0.978
 Recall: 0.978
 F1: 0.978
+                               precision    recall  f1-score   support
+
+    acute rheumatic arthritis       0.95      0.98      0.97      1617
+                disease, lyme       0.97      0.96      0.97      1550
+abnormalities, cardiovascular       1.00      0.98      0.99      1644
+          knee osteoarthritis       0.99      0.99      0.99      1870
+
+                     accuracy                           0.98      6681
+                    macro avg       0.98      0.98      0.98      6681
+                 weighted avg       0.98      0.98      0.98      6681
 ```
 #### Logistic Regression
 ```
@@ -60,6 +80,16 @@ Accuracy: 0.973208
 Precision: 0.973
 Recall: 0.973
 F1: 0.973
+                               precision    recall  f1-score   support
+
+    acute rheumatic arthritis       0.95      0.98      0.96      1617
+                disease, lyme       0.97      0.95      0.96      1550
+abnormalities, cardiovascular       0.99      0.97      0.98      1644
+          knee osteoarthritis       0.99      0.99      0.99      1870
+
+                     accuracy                           0.97      6681
+                    macro avg       0.97      0.97      0.97      6681
+                 weighted avg       0.97      0.97      0.97      6681
 ```
 ### Conclusion
 All three of the pipelines created worked exceptionally well. The lowest accuracy was the quickest performing, it was originally 93.4% but by using ngrams I was able to increase accuracy by 2.2% getting 95.7% accuracy with similar precision. The most accurate was the SVM prediction pipeline coming in at 97.8% accurate. Over all the results confirm that the goal set has been reached.

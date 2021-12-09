@@ -27,16 +27,16 @@ pipe  = Pipeline([
 ```
 ![plot](/confusion_matrix_Bayes.png)
 ```
-Accuracy: 0.957491
-Precision: 0.957
-Recall: 0.957
-F1: 0.957
+Accuracy: 0.960635
+Precision: 0.961
+Recall: 0.961
+F1: 0.961
                                precision    recall  f1-score   support
 
-    acute rheumatic arthritis       0.95      0.96      0.95      1617
-                disease, lyme       0.95      0.92      0.93      1550
+    acute rheumatic arthritis       0.94      0.96      0.95      1617
+                disease, lyme       0.95      0.92      0.94      1550
 abnormalities, cardiovascular       0.98      0.96      0.97      1644
-          knee osteoarthritis       0.95      0.99      0.97      1870
+          knee osteoarthritis       0.96      0.99      0.98      1870
 
                      accuracy                           0.96      6681
                     macro avg       0.96      0.96      0.96      6681
@@ -92,7 +92,9 @@ abnormalities, cardiovascular       0.99      0.97      0.98      1644
                  weighted avg       0.97      0.97      0.97      6681
 ```
 ### Conclusion
-All three of the pipelines created worked exceptionally well. The lowest accuracy was the quickest performing, it was originally 93.4% but by using ngrams I was able to increase accuracy by 2.2% getting 95.7% accuracy with similar precision. The most accurate was the SVM prediction pipeline coming in at 97.8% accurate. Over all the results confirm that the goal set has been reached.
+All three of the pipelines created worked exceptionally well. The lowest accuracy was the quickest performing, it was originally 93.4% but by using ngrams I was able to increase accuracy by 2.2% getting 96% accuracy with similar precision. The most accurate was the SVM prediction pipeline coming in at 97.8% accurate. Over all the results confirm that the goal set has been reached.
 
 ### Discussion
-If I were to continue this project, I would give Word2vec a go. I didn’t get to it for this project because of other class projects and the amount of time it would take to run those. The BoW seemed accurate enough to be passable though, with the lowest accuracy 95.7%. I would also be interested in trying to categorize new unseen articles that weren’t in the test data and see how the prediction models work on them.
+While the goal that was set was reached there are still many improvements that could be done to these pipelines. For the first one, it did pretty well on the cardiovascular portion with an 98% precision, but the other 3 didn't do so well. I tried multiple different settings for the pipeline and wasn't able to see much of a improvement, other than adding more ngrams but that multiplied the time it took to run, to the point it wasnt worth it. The SVM pipeline did really well but the cardiovascular is a litte suspicious. At 100% precision it could be over fitting for that classification, in order to test that though I would need more articles with abstracts of that classification. The same thing could be happening to the knee classification for this pipeline. For the last linear regression the same thing would be happening to the same classifications as the SVM pipeline. But there is also another issue with "acute rheumatic arthritis". The pipeline is having issues classifing 1 as 0 which is pulling down the overall accuracy. 
+
+If I were to continue this project, I would give Word2vec a go. I didn’t get to it for this project because of other class projects and the amount of time it would take to run those. The BoW seemed accurate enough to be passable though, with the lowest accuracy 96%. I would also be interested in greating a paer of the code to categorize new unseen articles and test them on the created models to see how the prediction models work on more articles.
